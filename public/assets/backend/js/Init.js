@@ -190,6 +190,10 @@ function ajaxSubmit(e, form, callBackFunction) {
 function initTrumbowyg(target) {
     $(target).trumbowyg({
         btnsDef: {
+            image: {
+                dropdown: ["insertImage", "upload"],
+                ico: "insertImage",
+            },
             heading: {
                 dropdown: ["h1", "h2", "h3", "h4", "h5", "h6"],
                 ico: "h1", // placeholder class
@@ -229,7 +233,7 @@ function initTrumbowyg(target) {
                     "ff9800",
                     "9c27b0",
                     "795548",
-                    "#e3433c",
+                    "e3433c",
                 ],
             },
         },

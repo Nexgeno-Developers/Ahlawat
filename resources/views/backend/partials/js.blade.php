@@ -54,6 +54,7 @@
 <script src="/assets/backend/js/trumbowyg/trumbowyg.upload.min.js"></script>
 <script src="/assets/backend/js/trumbowyg/trumbowyg.table.min.js"></script>
 <script src="/assets/backend/js/trumbowyg/trumbowyg.resizimg.min.js"></script>
+<script src="/assets/backend/js/trumbowyg/trumbowyg.colors.js"></script>
 
 <!--Init-->
 <script src="/assets/backend/js/Init.js"></script>

@@ -164,17 +164,18 @@
                 <h4 class="card-header header-title">Introduction Section</h4>
                 <button type="button" class="btn btn-sm btn-success" data-toggle="add-more" data-target="#intro-container"
                     data-counter="1" data-content='
-                                    <div class="intro-row row my-2 gy-2 align-items-start" data-toggle="remove-parent" data-parent=".intro-row">
+                                    <div class="intro-row row my-2 gy-2 align-items-start">
                                     <div class="col-1">
                                         <strong class="item-no">__NUM__.</strong>
                                     </div>
                                     <div class="col-10">
                                         <textarea name="sections[intro][texts][]" class="form-control trumbowyg" placeholder="Text block"></textarea>
                                     </div>
-                                    <div class="col-1">
-                                        <button type="button" class="btn btn-danger btn-sm">×</button>
+                                    <div class="col-md-1">
+                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="remove-parent" data-parent=".intro-row">×</button>
                                     </div>
-                                    </div>'>+ Add Text <span class="btn-num">1</span>
+                                    </div>'>
+                    + Add Card <span class="btn-num">1</span>
                 </button>
             </div>
             <div class="card-body">
@@ -771,7 +772,7 @@
 
 @section('page.scripts')
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.9.3/plugins/colors/trumbowyg.colors.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.9.3/plugins/colors/trumbowyg.colors.min.js"></script> --}}
     <script>
         function reinitEditors() {
             $('.trumbowyg').each(function () {
