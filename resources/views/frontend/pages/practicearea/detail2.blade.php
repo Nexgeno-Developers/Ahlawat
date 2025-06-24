@@ -47,489 +47,488 @@
         crossorigin="anonymous"></script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-        :root {
-            --primary-color: #E3433C;
-            --secondary-color: #434242;
-        }
-
-
-        body {
-            font-family: "poppins", sans-serif;
-        }
-
-
-        .general-data-protection-txt h3 span:nth-child(1) {
-            font-size: 40px;
-            color: #434242;
-        }
-
-        .general-data-protection-txt h3 span:nth-child(2) {
-            font-size: 40px;
-            color: #E3433C;
-        }
-
-        .general-data-protection-txt p {
-            font-size: 16px;
-            font-weight: 400;
-        }
-
-        .general-data-protection-btn {
-            width: 160px;
-            height: 43px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 500;
-            padding-top: 10px;
-            color: white;
-            background-color: #7F3233;
-        }
-
-        .general-data-protection-btn:hover {
-            color: white !important;
-            background-color: #7F3233 !important;
-        }
-
-
-        @media (max-width: 767px) {
-            .general-data-protection-btn {
-                width: calc(160px * 0.7);
-                height: calc(43px * 0.7);
-                font-size: calc(14px * 0.7);
-                padding-top: calc(10px * 0.7);
-            }
-
-            .general-data-protection-txt h3 span:nth-child(1),
-            .general-data-protection-txt h3 span:nth-child(2) {
-                font-size: calc(40px * 0.6);
-            }
-
-            .general-data-protection-txt p {
-                font-size: calc(16px * 0.8);
-            }
-
-        }
-
-        .sec-2-intro h4 {
-            font-size: 24px;
-        }
-
-        .sec-2-intro p {
-            font-size: 14px;
-            font-weight: 400;
-        }
-
-        .sec-2-info {
-            height: 232px;
-            border-radius: 17px;
-            border-top: 2px solid #E3433C;
-        }
-
-        .sec-2-info h5 {
-            font-size: 15px;
-        }
-
-        .sec-2-info ul {
-            padding-left: 20px;
-            font-size: 12px;
-            font-weight: 400;
-        }
-
-
-        .sectors-impact-act {
-            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.09);
-            border-radius: 20px 20px 0 0;
-            background-color: #7F3233;
-            padding: 15px 10px 10px 25px;
-        }
-
-        .sectors-impact-act-dc {
-            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.09);
-            border-radius: 20px 20px 0 0;
-            background-color: #434242;
-            padding: 15px 10px 10px 25px;
-        }
-
-        .sectors-impact-act-top i img {
-            width: 26px;
-            height: auto;
-        }
-
-        .sectors-impact-act-1 {
-            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.09);
-            border-radius: 0 0 20px 20px;
-            padding: 15px 10px 10px 25px;
-        }
-
-        .sectors-impact-act-top i {
-            width: 56.94px;
-            height: 56.94px;
-            background-color: #FFFFFF1A;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .sectors-impact-act-top h3 {
-            font-size: 20px;
-        }
-
-        .sectors-impact-act-1 p {
-            font-size: 11.50px;
-            font-weight: 400;
-        }
-
-        .sectors-impact-act-1 h4 {
-            font-size: 14px;
-            font-weight: 500;
-            padding-top: 15px;
-        }
-
-        .sectors-impact-act-1 ul {
-            padding-left: 20px;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 1.9;
-        }
-
-        .assist-dpdp-act {
-            height: 255px;
-            border-radius: 18px;
-            border-top: 2px solid #E3433C;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.25);
-        }
-
-        .assist-dpdp-act i img {
-            width: 28px;
-            height: auto;
-        }
-
-        .assist-dpdp-act i {
-            width: 56.94px;
-            height: 56.94px;
-            background-color: rgba(227, 67, 60, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .assist-dpdp-act h5 {
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .assist-dpdp-act p {
-            font-size: 10px;
-            font-weight: 400;
-        }
-
-        .assist-dpdp-act-btn {
-            background-color: #7F3233;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-size: 10px;
-        }
-
-        .assist-dpdp-act-btn:hover {
-            color: white !important;
-            background-color: #7F3233 !important;
-        }
-
-        .assist-dpdp-act a img {
-            width: 5px;
-        }
-
-
-        .timeline-topper-contnent-dv h4 {
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .timeline-topper-contnent-dv h4 span:nth-child(1) {
-            color: #434242;
-        }
-
-        .timeline-topper-contnent-dv h4 span:nth-child(2) {
-            color: #E3433C;
-        }
-
-        .timeline-topper-contnent-dv p {
-            font-size: 13px;
-            font-weight: 400;
-        }
-
-
-        .step-number {
-            background-color: #7F3233;
-            color: white;
-            border-radius: 50%;
-            /* aspect-ratio: 1 /1; */
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 25px;
-            padding: 30px;
-        }
-
-        .step-number-dv h5 span img {
-            width: 60px;
-        }
-
-        @media (max-width: 991px) {
-            .step-number-dv h5 span img {
-                display: none
-            }
-        }
-
-        @media (max-width: 425px) {
-            .step-number {
-                width: calc(50px * 0.7);
-                height: calc(50px * 0.7);
-                font-size: calc(25px * 0.7);
-                padding: calc(30px * 0.7);
-                border-radius: 50%;
-                aspect-ratio: 1 /1;
-                ;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .step-text-div {
-                box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
-            }
-
-        }
-
-        .step-text-div {
-            box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-        }
-
-        .step-text-title {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .step-text-para {
-            font-size: 12px;
-            font-weight: 400;
-        }
-
-        @media (min-width: 992px) {
-            .timeline-list-contnent-dv-num-lft {
-                left: 30%;
-            }
-        }
-
-        .card-dpda-2025-penalties {
-            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.09);
-            border-radius: 20px 20px 0 0;
-        }
-
-        .card-dpda-2025-penalties-1 {
-            box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.09);
-            border-radius: 0 0 20px 20px;
-        }
-
-        .card-dpda-2025-penalties {
-            background-color: #7F3233;
-        }
-
-        .card-dpda-2025-penalties-top {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .card-dpda-2025-penalties-1 h5 {
-            font-size: 22px;
-            font-weight: 600;
-            color: #E3433C;
-        }
-
-        .card-dpda-2025-penalties-1 p {
-            font-size: 12px;
-            font-weight: 400;
-        }
-
-        .Ahlawat-case-studies-top-content h3 span {
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .Ahlawat-case-studies-top-content h3 span:nth-child(1) {
-            color: #434242;
-        }
-
-        .Ahlawat-case-studies-top-content h3 span:nth-child(2) {
-            color: #E3433C;
-        }
-
-        .Ahlawat-case-studies-top-content p {
-            font-size: 14px;
-            font-weight: 400;
-            color: #434242;
-        }
-
-        .Ahlawat-case-studies-img-1 {
-            position: relative;
-            background:
-                linear-gradient(180deg, rgba(127, 50, 51, 0.9) 0%, rgba(127, 50, 51, 0.9) 100%),
-                url(../assets/frontend/practicarea/Ahlawat-case-studies-1.webp) no-repeat center center;
-            background-size: cover;
-            /* height: 309px; */
-        }
-
-        .bdr-main-coro {
-            border-radius: 20px;
-            box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .Ahlawat-case-studies-img-1::before {
-            content: '';
-            /* position: absolute; */
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
-        }
-
-        .Ahlawat-case-studies-img-txt h5 span {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        .Ahlawat-case-studies-img-txt h3 {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .Ahlawat-case-studies-img-txt p {
-            font-size: 12px;
-            font-weight: 400;
-        }
-
-        .Ahlawat-case-studies-body h5 {
-            font-size: 16px;
-            font-weight: 500;
-            color: #7f3233;
-        }
-
-        .Ahlawat-case-studies-body p {
-            font-size: 12px;
-            font-weight: 400;
-        }
-
-        .Ahlawat-case-studies-body ul li {
-            font-size: 12px;
-            font-weight: 400;
-            padding-bottom: 5px;
-        }
-
-        .Ahlawat-case-studies-body ul {
-            list-style-image: url('../assets/frontend/practicarea/li-icon.svg');
-            padding-left: 20px;
-        }
-
-        @media (max-width: 767px) {
-            .Ahlawat-case-studies-img-1 {
-                border-radius: 20px 20px 0 0;
-            }
-
-        }
-
-        @media (min-width: 768px) {
-            .Ahlawat-case-studies-img-1 {
-                border-radius: 20px 0px 0 20px;
-            }
-
-        }
-
-        .carousel-bottom-controls .btn {
-            aspect-ratio: 1 /1;
-            border-radius: 50%;
-            color: #E3433C;
-            background-color: rgba(227, 67, 60, 0.1);
-            border: 1.7px solid #E3433C;
-        }
-
-        .carousel-bottom-controls .btn i {
-            font-size: 1.1rem;
-            vertical-align: middle;
-            object-fit: cover;
-            display: flex;
-            align-items: center;
-        }
-
-
-        .service-detail-overlay-1 {
-            position: relative;
-            background:
-                linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%),
-                url(../assets/frontend/practicarea/service-detail-overlay-1.webp) no-repeat center center;
-            background-size: cover;
-        }
-
-        .service-detail-overlay-1::before {
-            content: '';
-            /* position: absolute; */
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
-        }
-
-        .service-detail-overlay-card {
-            height: 272px;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 20px;
-            border: 0.5px solid #E3433C;
-        }
-
-        .service-detail-overlay-card-body div h5 {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .service-detail-overlay-card-body div p {
-            font-size: 12px;
-            font-weight: 400;
-        }
-
-        .service-icon-bg {
-            background-color: rgba(227, 67, 60, 0.1);
-            border-radius: 50%;
-        }
-
-        .service-detail-overlay-top-contnt h5 span {
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .service-detail-overlay-top-contnt h5 span:nth-child(1) {
-            color: #ffffff;
-        }
-
-        .service-detail-overlay-top-contnt h5 span:nth-child(2) {
-            color: #E3433C;
-        }
-
-        .service-detail-overlay-top-contnt p {
-            font-size: 14px;
-            font-weight: 400;
-        }
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+/* body {
+  font-family: "poppins", sans-serif;
+} */
+
+.section-color {
+  background: rgba(231, 63, 58, 0.03);
+
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+
+}
+
+p,
+li {
+  font-family: "poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.orange-color {
+  color: #E3433C;
+}
+
+.gray-color {
+  color: #434242;
+}
+
+.general-data-protection-txt {
+  font-size: 40px;
+}
+
+.general-data-protection-txt h3 span {
+  color: #E3433C;
+}
+
+.general-data-protection-txt p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.general-data-protection-btn {
+  width: 160px !important;
+  height: 43px !important;
+  border-radius: 30px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  padding-top: 10px !important;
+  color: white !important;
+  background-color: #7F3233 !important;
+}
+
+.general-data-protection-btn:hover {
+  color: white !important;
+  background-color: #7F3233 !important;
+}
+
+.general-data-protection-img-1 {
+  border-radius: 20px;
+}
+
+.sec-2-info {
+  height: 232px;
+  border-radius: 17px;
+  border-top: 2px solid #E3433C;
+  box-shadow: 0 0 5px 5px rgba(145, 145, 145, 0.158);
+}
+
+.sec-2-info h5 {
+  font-size: 15px;
+}
+
+.sec-2-info ul {
+  padding-left: 16px;
+  line-height: 1.4em;
+}
+
+.sectors-impact-act {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.09);
+  border-radius: 20px 20px 0 0;
+  background-color: #7F3233;
+  padding: 15px 10px 10px 25px;
+}
+
+.sectors-impact-act-dc {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.09);
+  border-radius: 20px 20px 0 0;
+  background-color: #434242;
+  padding: 15px 10px 10px 25px;
+}
+
+.sectors-impact-act-top i img {
+  width: 26px;
+  height: auto;
+}
+
+.sectors-impact-act-1 {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.09);
+  border-radius: 0 0 20px 20px;
+  padding: 15px 10px 10px 25px;
+}
+
+.sectors-impact-act-top i {
+  width: 56.94px;
+  height: 56.94px;
+  background-color: #FFFFFF1A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectors-impact-act-top h3 {
+  font-size: 20px;
+}
+
+.sectors-impact-act-1 p {
+  font-size: 11.50px;
+  font-weight: 400;
+}
+
+.sectors-impact-act-1 h4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sectors-impact-act-1 ul {
+  padding-left: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.assist-dpdp-act {
+  height: 255px;
+  border-radius: 18px;
+  border-top: 4px solid #E3433C;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.25);
+}
+
+.assist-dpdp-act i img {
+  width: 28px;
+  height: auto;
+}
+
+.assist-dpdp-act i {
+  width: 56.94px;
+  height: 56.94px;
+  background-color: rgba(227, 67, 60, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assist-dpdp-act h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.assist-dpdp-act p {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.assist-dpdp-act-btn {
+  background-color: #7F3233 !important;
+  padding: 7px 20px !important;
+  border-radius: 30px !important;
+  font-size: 10px !important;
+}
+
+.assist-dpdp-act-btn:hover {
+  color: white !important;
+  background-color: #7F3233 !important;
+}
+
+.assist-dpdp-act a img {
+  width: 5px;
+}
+
+.step-number {
+  background-color: #7F3233;
+  color: white;
+  border-radius: 50%;
+  /* aspect-ratio: 1 /1; */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 25px;
+  padding: 30px;
+}
+
+.step-number-dv h5 span img {
+  width: 60px;
+}
+
+.step-text-div {
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.step-text-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.step-text-para {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.card-dpda-2025-penalties {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.09);
+  border-radius: 20px 20px 0 0;
+}
+
+.card-dpda-2025-penalties-1 {
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 0 0 20px 20px;
+}
+
+.card-dpda-2025-penalties {
+  background-color: #7F3233;
+}
+
+.card-dpda-2025-penalties-top h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-dpda-2025-penalties-1 h5 {
+  font-size: 22px;
+}
+
+.card-dpda-2025-penalties-1 p {
+  /* font-size: 12px; */
+  font-weight: 400;
+}
+
+.Ahlawat-case-studies-top-content h3 span {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
+.Ahlawat-case-studies-top-content p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #434242;
+}
+
+.Ahlawat-case-studies-img-1 {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(127, 50, 51, 0.9) 0%, rgba(127, 50, 51, 0.9) 100%),
+    url(assets/Ahlawat-case-studies-1.webp) no-repeat center center;
+  background-size: cover;
+  /* min-height: 310px; */
+  /* max-height: 310px; */
+  /* overflow-x: auto; */
+}
+
+.bdr-main-coro {
+  border-radius: 20px;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+  /* min-height: 310px; */
+  max-height: 310px;
+  overflow-x: auto;
+}
+
+.Ahlawat-case-studies-img-1::before {
+  content: '';
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  /* min-height: 310px; */
+  /* max-height: 310px; */
+  /* overflow-x: auto; */
+}
+
+.coro-innr{
+  border-radius: 20px;
+}
+
+.Ahlawat-case-studies-img-txt h5 span {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.Ahlawat-case-studies-img-txt h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Ahlawat-case-studies-img-txt p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.Ahlawat-case-studies-body h5 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #7f3233;
+}
+
+.Ahlawat-case-studies-body p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.Ahlawat-case-studies-body ul li {
+  font-size: 12px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.Ahlawat-case-studies-body ul {
+  list-style-image: url('assets/li-icon.svg');
+  padding-left: 20px;
+}
+
+.carousel-bottom-controls .btn {
+  aspect-ratio: 1 /1 !important;
+  border-radius: 50% !important;
+  color: #E3433C !important;
+  background-color: rgba(227, 67, 60, 0.1) !important;
+  border: 1.7px solid #E3433C !important;
+}
+
+.carousel-bottom-controls .btn i {
+  font-size: 1.1rem !important;
+  vertical-align: middle !important;
+  object-fit: cover !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.service-detail-overlay-1 {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%),
+    url(assets/service-detail-overlay-1.webp) no-repeat center center;
+  background-size: cover;
+}
+
+.service-detail-overlay-1::before {
+  content: '';
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.service-detail-overlay-card {
+  height: 272px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 20px;
+  border: 0.5px solid #E3433C;
+}
+
+.service-detail-overlay-card-body div h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.service-detail-overlay-card-body div p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.service-icon-bg {
+  background-color: rgba(227, 67, 60, 0.1);
+  border-radius: 50%;
+}
+
+.service-detail-overlay-top-contnt p {
+  font-weight: 400;
+}
+
+.timeline-vertical-line .container {
+  position: relative;
+}
+
+.timeline-vertical-line .container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  top: 10%; /* Adjust as needed */
+  left: 50%;
+  max-height: 86%;
+  width: 2px;
+  background-color: rgba(227, 68, 60, 0.452);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+/* ===================== Media Screen ===================== */
+
+@media screen and (max-width: 991px) {
+  .timeline-vertical-line .container::before {
+    left: 5px; /* Adjust as needed for smaller screens */
+    width: 2px; /* Thinner line for smaller screens */
+  }  
+}
+
+@media (max-width: 767px) {
+  .general-data-protection-btn {
+    width: calc(160px * 0.7) !important;
+    height: calc(43px * 0.7) !important;
+    font-size: calc(14px * 0.7) !important;
+    padding-top: calc(10px * 0.7) !important;
+  }
+
+  .general-data-protection-txt,
+  .general-data-protection-txt span {
+    font-size: calc(40px * 0.6);
+  }
+
+  .general-data-protection-txt p {
+    font-size: calc(16px * 0.8);
+  }
+  
+  .Ahlawat-case-studies-img-1 {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .timeline-vertical-line .container::before {
+    left: 5px; /* Adjust as needed for smaller screens */
+    width: 0px; /* Thinner line for smaller screens */
+  }
+
+}
+
+@media (max-width: 425px) {
+  .step-number {
+    width: calc(50px * 0.7);
+    height: calc(50px * 0.7);
+    font-size: calc(25px * 0.7);
+    padding: calc(30px * 0.7);
+    border-radius: 50%;
+    aspect-ratio: 1 /1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-text-div {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: 992px) {
+  .timeline-list-contnent-dv-num-lft {
+    left: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .Ahlawat-case-studies-img-1 {
+    border-radius: 20px 0px 0 20px;
+  }
+}
+
     </style>
 
     @php
