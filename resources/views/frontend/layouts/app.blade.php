@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <!-- Preload critical banner image -->
+     <link rel="preload" as="image" href="https://www.ahlawatassociates.com/storage/assets/image/banner/JEu9A1FuWu0DMXR2UmwYXkeCL4y9777ARGLdwoqt.webp" fetchpriority="high" >
+    <!----------Meta Information---------->
+    @include('frontend.partials.meta')
+
+    <!-----------Stylesheets------------>
+    @include('frontend.partials.css')
+
+    <?= get_settings('header_script') ?>
+
+</head>
+
+<body>
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T93DNMW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ 
+
+    <!----=========topbar=========----->
+
+    @include('frontend.partials.topbar')
+
+    <!----=========End topbar=========----->
+
+
+            <div class="row main-frame">
+
+                <!---========sidebar======----->
+
+                @include('frontend.partials.sidebar')
+
+                <!---========end sidebar======----->
+
+                <div class="col-lg-10 col-12 pd-0">
+
+                    <!---========Header======----->
+
+                    @include('frontend.partials.header')
+
+                    <!---========end Header======----->
+
+                    <!---======== page content ====-------->
+
+                    @yield('page.content')
+
+                    <!---======== page content ===== -------->
+
+                    <!--------------------------Footer Start---------------------------------------------------------->
+
+                    @include('frontend.partials.footer')
+
+                    <!--Footer Ends-->
+
+                </div>
+            </div>
+	
+    <!--javascript-->
+    @include('frontend.partials.js')
+    @yield('page.scripts')
+    @yield('component.scripts')
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+            var lazyImages = document.querySelectorAll('img');
+
+            lazyImages.forEach(function(img) {
+                var tempImg = new Image();
+                tempImg.onload = function() {
+                    // Calculate aspect ratio
+                    var aspectRatio = tempImg.naturalWidth / tempImg.naturalHeight;
+
+                    // Get the computed style of the image
+                    var width = img.clientWidth || img.parentElement.clientWidth;
+                    var height = width / aspectRatio;
+
+                    // Set width and height attributes
+                    img.setAttribute('width', Math.round(width));
+                    img.setAttribute('height', Math.round(height));
+
+                    // Set the src attribute to start loading the image
+                    img.src = img.getAttribute('data-src');
+                };
+                tempImg.src = img.getAttribute('data-src');
+            });
+        });
+	</script>
+</body>
+
+</html>
