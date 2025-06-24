@@ -599,7 +599,7 @@
                     <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
                         <div class="general-data-protection-txt">
                             <h3 class="fw-semibold pb-md-3 pb-2">
-                                <span>{{ $hero['title'] ?? '' }}</span>
+                                {!! highlightAsteriskText($hero['title'] ?? '') !!}
                             </h3>
                             <p class="pb-1">
                                 {{ $hero['subtitle'] ?? '' }}
@@ -627,7 +627,7 @@
             <div class="container">
                 <div class="sec-2-intro text-center">
                     @if (!empty($intro['title']))
-                        <h4 class="fw-semibold pb-2">{{ $intro['title'] }}</h4>
+                        <h4 class="fw-semibold pb-2">{!! highlightAsteriskText($intro['title'] ?? '') !!}</h4>
                     @endif
                     @if (!empty($intro['subtitle']))
                         <p class="pb-2">{!! $intro['subtitle'] !!}</p>
@@ -653,7 +653,7 @@
             <div class="container">
 
                 <div class="timeline-topper-contnent-dv text-center">
-                    <h4 class="mb-md-3 mb-2"><span>{{ $sectors['title'] ?? '' }}</span></h4>
+                    <h4 class="mb-md-3 mb-2"><span>{!! highlightAsteriskText($sectors['title'] ?? '') !!}</span></h4>
                     <p class="pb-2">@if(!empty($sectors['subtitle'])) <span>{{ $sectors['subtitle'] }}</span> @endif</p>
                 </div>
 
@@ -667,7 +667,7 @@
                                             <img src="{{ asset('storage/' . $sector['icon']) }}" alt="">
                                         </i>&nbsp;&nbsp;
                                     @endif
-                                    <h3 class="text-light fw-semibold mt-2">{{ $sector['title'] ?? '' }}</h3>
+                                    <h3 class="text-light fw-semibold mt-2">{!! highlightAsteriskText($sector['title'] ?? '') !!}</h3>
                                 </div>
                             </div>
                             <div class="sectors-impact-act-1">
@@ -684,7 +684,7 @@
         <section class="pt-md-3 pt-2">
             <div class="container">
                 <div class="timeline-topper-contnent-dv text-center">
-                    <h4 class="mb-md-3 mb-2"><span>{{ $assist['title'] ?? '' }}</span></h4>
+                    <h4 class="mb-md-3 mb-2"><span>{!! highlightAsteriskText($assist['title'] ?? '') !!}</span></h4>
                     <p class="pb-2">{{ $assist['subtitle'] ?? '' }}</p>
                 </div>
                 @if(!empty($assist['items']))
@@ -698,7 +698,7 @@
                                         </i>
                                     @endif
 
-                                    <h5 class="pt-3">{{ $card['title'] ?? '' }}</h5>
+                                    <h5 class="pt-3">{!! highlightAsteriskText($card['title'] ?? '') !!}</h5>
                                     {!! $card['text'] ?? '' !!}
                                     {{-- <p class="pt-1">{!! $card['text'] ?? '' !!}</p> --}}
 
@@ -726,7 +726,7 @@
             @if(!empty($process['title']) || !empty($process['subtitle']))
                 <div class="timeline-topper-contnent-dv text-center">
                     <h4 class="mb-md-3 mb-2">
-                        @if(!empty($process['title'])) <span>{{ $process['title'] }}</span> @endif
+                        @if(!empty($process['title'])) <span>{!! highlightAsteriskText($process['title'] ?? '') !!}</span> @endif
                     </h4>
                     <p>@if(!empty($process['subtitle'])) <span>{{ $process['subtitle'] }}</span> @endif</p>
                 </div>
@@ -798,7 +798,7 @@
             <div class="container">
                 <div class="timeline-topper-contnent-dv text-center pb-3">
                     <h4 class="pb-2">
-                        <span>{{ $data['penalties']['title'] ?? '' }}</span>
+                        <span>{!! highlightAsteriskText($data['penalties']['title'] ?? '') !!}</span>
                     </h4>
                     <p>{{ $data['penalties']['subtitle'] ?? '' }}</p>
                 </div>
@@ -826,7 +826,7 @@
             <div class="row">
                 <div class="Ahlawat-case-studies-top-content text-center">
                     <h3 class="pb-1">
-                        <span>{{ $data['case_studies']['title'] ?? '' }}</span>
+                        <span>{!! highlightAsteriskText($data['case_studies']['title'] ?? '') !!}</span>
                     </h3>
                     <p>{{ $data['case_studies']['subtitle'] ?? '' }}</p>
                 </div>
@@ -887,10 +887,12 @@
             <div class="service-detail-overlay-1 py-md-5 py-4">
                 <div class="container">
                     <div class="service-detail-overlay-top-contnt text-center mb-5">
-                        <h5>
+                        <h5>{!! highlightAsteriskText($data['whyus']['title'] ?? '') !!}</h5>
+                        
+                        {{-- <h5>
                             <span>{{ Str::before($data['whyus']['title'] ?? '', ' ') }}</span>
                             <span>{{ Str::after($data['whyus']['title'] ?? '', ' ') }}</span>
-                        </h5>
+                        </h5> --}}
                         <p class="text-light">{!! $data['whyus']['subtitle'] ?? '' !!}</p>
                     </div>
 

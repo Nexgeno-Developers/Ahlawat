@@ -18,6 +18,22 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Contact;
 
+if (!function_exists('highlightAsteriskText')) {
+    function highlightAsteriskText($text)
+    {
+        // Escape all HTML first to prevent XSS
+        $text = e($text);
+
+        // Replace all *text* with <span style="color: #e3433c;">text</span>
+        $formatted = preg_replace_callback('/\*(.*?)\*/', function ($matches) {
+            return '<span style="color: #e3433c;">' . $matches[1] . '</span>';
+        }, $text);
+
+        // Wrap the whole thing in a parent <span> if needed, or return directly
+        return $formatted;
+    }
+}
+
 
     if (!function_exists('datetimeFormatter')) {
         function datetimeFormatter($value)
