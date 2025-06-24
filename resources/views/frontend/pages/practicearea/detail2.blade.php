@@ -150,7 +150,7 @@ li {
 .sectors-impact-act-1 {
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.09);
   border-radius: 0 0 20px 20px;
-  padding: 15px 10px 10px 25px;
+  padding: 0px 10px 10px 25px;
 }
 
 .sectors-impact-act-top i {
@@ -175,6 +175,7 @@ li {
 .sectors-impact-act-1 h4 {
   font-size: 14px;
   font-weight: 500;
+  padding-top: 15px;
 }
 
 .sectors-impact-act-1 ul {
@@ -310,7 +311,7 @@ li {
   position: relative;
   background:
     linear-gradient(180deg, rgba(127, 50, 51, 0.9) 0%, rgba(127, 50, 51, 0.9) 100%),
-    url(assets/Ahlawat-case-studies-1.webp) no-repeat center center;
+    url(/assets/frontend/practicarea/Ahlawat-case-studies-1.webp) no-repeat center center;
   background-size: cover;
   /* min-height: 310px; */
   /* max-height: 310px; */
@@ -402,7 +403,7 @@ li {
   position: relative;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%),
-    url(assets/service-detail-overlay-1.webp) no-repeat center center;
+    url(/assets/frontend/practicarea/service-detail-overlay-1.webp) no-repeat center center;
   background-size: cover;
 }
 
@@ -439,6 +440,10 @@ li {
   border-radius: 50%;
 }
 
+.service-detail-overlay-top-contnt h5 {
+    color: white;
+}
+
 .service-detail-overlay-top-contnt p {
   font-weight: 400;
 }
@@ -469,6 +474,9 @@ li {
     left: 5px; /* Adjust as needed for smaller screens */
     width: 2px; /* Thinner line for smaller screens */
   }  
+  .step-number-dv h5 span img{
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -592,27 +600,27 @@ li {
     --}}
 
     @if(!empty($hero))
-        <section class="pt-md-5 pt-3">
+        <section class="section-color pt-md-5 pt-3 pb-md-5 pb-3">
             <div class="container">
-                <div class="row g-3">
-                    <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-lg-6 col-md-12 ">
                         <div class="general-data-protection-txt">
-                            <h3 class="fw-semibold pb-md-3 pb-2">
+                            <h3 class="fw-semibold pb-md-3 pb-2 gray-color">
                                 {!! highlightAsteriskText($hero['title'] ?? '') !!}
                             </h3>
-                            <p class="pb-1">
+                            <p class="pb-md-2 pb-0">
                                 {{ $hero['subtitle'] ?? '' }}
                             </p>
                             @if(!empty($hero['button_url']))
-                                <a href="{{ isset($hero['button_url']) ? url($hero['button_url']) : '' }}" class="btn general-data-protection-btn">Book
+                                <a href="{{ isset($hero['button_url']) ? url($hero['button_url']) : '' }}" class="btn general-data-protection-btn mb-2">Book
                                     Now</a>
                             @endif
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
+                    <div class="col-lg-6 col-md-12">
                         <div class="general-data-protection-img">
                             @if(!empty($hero['image']))
-                                <img src="{{ asset('storage/' . $hero['image']) }}" alt="DPDP Hero Image" class="img-fluid">
+                                <img src="{{ asset('storage/' . $hero['image']) }}" alt="DPDP Hero Image" class="img-fluid general-data-protection-img-1">
                             @endif
                         </div>
                     </div>
@@ -622,21 +630,22 @@ li {
     @endif
 
     @if (!empty($intro))
-        <section class="pt-md-3 pt-2">
+        <section class="pt-md-4 pt-3 pb-md-5 pb-3">
             <div class="container">
-                <div class="sec-2-intro text-center">
-                    @if (!empty($intro['title']))
-                        <h4 class="fw-semibold pb-2">{!! highlightAsteriskText($intro['title'] ?? '') !!}</h4>
-                    @endif
-                    @if (!empty($intro['subtitle']))
-                        <p class="pb-2">{!! $intro['subtitle'] !!}</p>
-                    @endif
-                </div>
+                
                 @if(!empty($intro['texts']))
                     <div class="row g-3">
+                        <div class="sec-2-intro text-center">
+                    @if (!empty($intro['title']))
+                        <h4 class="fw-semibold pb-1 heading gray-color">{!! highlightAsteriskText($intro['title'] ?? '') !!}</h4>
+                    @endif
+                    @if (!empty($intro['subtitle']))
+                        <p class="pb-md-1 pb-0">{!! $intro['subtitle'] !!}</p>
+                    @endif
+                </div>
                         @foreach($intro['texts'] ?? [] as $idx => $text)
-                            <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center">
-                                <div class="sec-2-info p-4 h-100">
+                            <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
+                                <div class="sec-2-info pt-4 pb-3 pe-5 ps-4 h-100">
                                     {!! $text !!}
                                 </div>
                             </div>
@@ -648,17 +657,17 @@ li {
     @endif
 
     @if (!empty($sectors))
-        <section class="pt-md-3 pt-2">
+        <section class="pt-md-4 pt-3 pb-md-4 pb-2 section-color">
             <div class="container">
+                <div class="row">
 
-                <div class="timeline-topper-contnent-dv text-center">
-                    <h4 class="mb-md-3 mb-2"><span>{!! highlightAsteriskText($sectors['title'] ?? '') !!}</span></h4>
-                    <p class="pb-2">@if(!empty($sectors['subtitle'])) <span>{{ $sectors['subtitle'] }}</span> @endif</p>
+                    <div class="timeline-topper-contnent-dv text-center">
+                    <h4 class="fw-semibold pb-1 heading gray-color"><span>{!! highlightAsteriskText($sectors['title'] ?? '') !!}</span></h4>
+                    <p class="pb-md-1 pb-0">@if(!empty($sectors['subtitle'])) <span>{{ $sectors['subtitle'] }}</span> @endif</p>
                 </div>
 
-                <div class="row g-3">
                     @foreach($sectors['items'] ?? [] as $idx => $sector)
-                        <div class="col-lg-6 col-md-6 mb-3">
+                        <div class="col-lg-6 col-md-12 mb-3 mt-1">
                             <div class="{{ $idx % 2 == 0 ? 'sectors-impact-act' : 'sectors-impact-act-dc' }}">
                                 <div class="sectors-impact-act-top d-flex align-items-center">
                                     @if(!empty($sector['icon']))
@@ -670,7 +679,7 @@ li {
                                 </div>
                             </div>
                             <div class="sectors-impact-act-1">
-                                <p class="py-2">{!! $sector['text'] ?? '' !!}</p>
+                                <p class="pt-1 pe-5">{!! $sector['text'] ?? '' !!}</p>
                             </div>
                         </div>
                     @endforeach
@@ -680,14 +689,15 @@ li {
     @endif
 
     @if($assist)
-        <section class="pt-md-3 pt-2">
+        <section class="pt-md-4 pt-3 pb-md-4 pb-2">
             <div class="container">
-                <div class="timeline-topper-contnent-dv text-center">
-                    <h4 class="mb-md-3 mb-2"><span>{!! highlightAsteriskText($assist['title'] ?? '') !!}</span></h4>
-                    <p class="pb-2">{{ $assist['subtitle'] ?? '' }}</p>
-                </div>
+                
                 @if(!empty($assist['items']))
                     <div class="row">
+                        <div class="timeline-topper-contnent-dv text-center">
+                    <h4 class="fw-semibold pb-1 heading gray-color"><span>{!! highlightAsteriskText($assist['title'] ?? '') !!}</span></h4>
+                    <p class="pb-md-1 pb-0">{{ $assist['subtitle'] ?? '' }}</p>
+                </div>
                         @foreach($assist['items'] as $card)
                             <div class="col-lg-6 col-md-6 d-flex justify-content-center align-items-center mb-3">
                                 <div class="assist-dpdp-act p-4 h-100">
@@ -714,8 +724,9 @@ li {
         </section>
     @endif
 
-    <section class="pt-md-3 pt-2">
-        <div class="container">
+    <section class="pt-md-4 pt-3 pb-md-4 pb-2 section-color">
+        <div class="timeline-vertical-line">
+            <div class="container">
             @php
                 $process = $data['process'] ?? [];
                 $process_items = $process['items'] ?? [];
@@ -724,7 +735,7 @@ li {
             {{-- Section Title/Sub --}}
             @if(!empty($process['title']) || !empty($process['subtitle']))
                 <div class="timeline-topper-contnent-dv text-center">
-                    <h4 class="mb-md-3 mb-2">
+                    <h4 class="fw-semibold pb-1 heading gray-color">
                         @if(!empty($process['title'])) <span>{!! highlightAsteriskText($process['title'] ?? '') !!}</span> @endif
                     </h4>
                     <p>@if(!empty($process['subtitle'])) <span>{{ $process['subtitle'] }}</span> @endif</p>
@@ -738,14 +749,14 @@ li {
                     $isOdd = $index % 2 === 0;
                 @endphp
 
-                <div class="row g-3 d-flex align-items-center mt-4">
+                <div class="row g-5 d-flex align-items-center mt-0">
                     @if($isOdd)
                         {{-- Number left, text right --}}
                         <div class="col-lg-6 col-md-2 col-2 position-relative timeline-list-contnent-dv-num-lft">
                             <div class="step-number-dv">
                                 <h5 class="d-flex align-items-center">
-                                    <span class="step-number">{{ $step }}</span>
-                                    <span class="d-none d-md-inline">
+                                    <span class="step-number me-lg-4">{{ $step }}</span>
+                                    <span class="d-none d-lg-inline">
                                         <img src="{{ asset('assets/frontend/practicarea/arrow-right.svg') }}" alt=""
                                             style="width: 60px;">
                                     </span>
@@ -753,29 +764,27 @@ li {
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-10 col-10 position-relative">
-                            <div class="step-text-div p-4">
+                            <div class="step-text-div p-md-4 p-3">
                                 <h5 class="step-text-title">{{ $item['title'] ?? '' }}</h5>
-                                <div class="step-text-para">{!! $item['text'] ?? '' !!}</div>
+                                <div class="step-text-para mb-0">{!! $item['text'] ?? '' !!}</div>
                             </div>
                         </div>
                     @else
                         {{-- Text left, number right --}}
                         <div class="col-lg-6 col-md-10 col-10 position-relative order-2 order-lg-1">
-                            <div class="step-text-div p-4">
+                            <div class="step-text-div p-md-4 p-3">
                                 <h5 class="step-text-title">{{ $item['title'] ?? '' }}</h5>
-                                <div class="step-text-para">{!! $item['text'] ?? '' !!}</div>
+                                <div class="step-text-para mb-0">{!! $item['text'] ?? '' !!}</div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-2 col-2 position-relative timeline-list-contnent-dv-num-rgt order-1 order-lg-2">
                             <div class="step-number-dv">
                                 <h5 class="d-flex align-items-center">
-                                    <span class="d-none d-lg-inline">
+                                    <span class="d-none d-lg-inline me-lg-4">
                                         <img src="{{ asset('assets/frontend/practicarea/arrow-left.svg') }}" alt="">
                                     </span>
                                     <span class="step-number">{{ $step }}</span>
-                                    <span class="d-inline d-lg-none d-none d-md-inline">
-                                        <img src="{{ asset('assets/frontend/practicarea/arrow-right.svg') }}" alt="">
-                                    </span>
+                                    
                                 </h5>
                             </div>
                         </div>
@@ -785,24 +794,27 @@ li {
 
             {{-- Bottom Paragraph --}}
             @if(!empty($process['paragraph']))
-                <div class="timeline-topper-contnent-dv text-center mt-md-5 mt-4">
+                <div class="text-center mt-md-5 mt-4">
                     <div>{!! $process['paragraph'] !!}</div>
                 </div>
             @endif
         </div>
+        </div>
     </section>
 
     @if (!empty($data['penalties']['items']))
-        <section class="pt-md-3 pt-2">
+        <section class="pt-md-4 pt-3 pb-md-4 pb-2">
             <div class="container">
-                <div class="timeline-topper-contnent-dv text-center pb-3">
-                    <h4 class="pb-2">
-                        <span>{!! highlightAsteriskText($data['penalties']['title'] ?? '') !!}</span>
-                    </h4>
-                    <p>{{ $data['penalties']['subtitle'] ?? '' }}</p>
-                </div>
 
                 <div class="row">
+                
+                    <div class="timeline-topper-contnent-dv text-center pb-3">
+                    <h4 class="fw-semibold pb-1 heading gray-color">
+                        <span>{!! highlightAsteriskText($data['penalties']['title'] ?? '') !!}</span>
+                    </h4>
+                    <p class="pb-md-1 pb-0">{{ $data['penalties']['subtitle'] ?? '' }}</p>
+                </div>
+
                     @foreach ($data['penalties']['items'] as $item)
                         <div class="col-lg-6 col-md-6 position-relative mb-4">
                             <div class="card-dpda-2025-penalties px-4 pt-3 pb-2">
@@ -820,14 +832,14 @@ li {
         </section>
     @endif
 
-    <section class="pt-md-3 pt-2">
+    <section class="pt-md-4 pt-3 pb-md-4 pb-2 section-color">
         <div class="container">
             <div class="row">
-                <div class="Ahlawat-case-studies-top-content text-center">
-                    <h3 class="pb-1">
+                <div class="timeline-topper-contnent-dv text-center">
+                    <h4 class="fw-semibold pb-1 heading gray-color">
                         <span>{!! highlightAsteriskText($data['case_studies']['title'] ?? '') !!}</span>
-                    </h3>
-                    <p>{{ $data['case_studies']['subtitle'] ?? '' }}</p>
+                    </h4>
+                    <p class="pb-md-1 pb-0">{{ $data['case_studies']['subtitle'] ?? '' }}</p>
                 </div>
 
                 @php
@@ -837,16 +849,17 @@ li {
                 @if(count($case_studies_items))
                     <div class="package-carousel-container pt-md-3 pt-2">
                         <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
+                            <div class="carousel-inner coro-innr">
                                 @foreach($case_studies_items as $index => $item)
                                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                                         <div class="row">
+
                                             <div class="col-lg-12 col-md-12 col-12">
                                                 <div class="card mb-3 bdr-main-coro">
                                                     <div class="row g-0">
                                                         <div class="col-md-4 Ahlawat-case-studies-img-1">
                                                             <!-- Background image can be handled by CSS or another key -->
-                                                            <div class="Ahlawat-case-studies-img-txt p-4 text-light">
+                                                            <div class="Ahlawat-case-studies-img-txt p-4 text-light" style="position: sticky; top: 0;">
                                                                 <h5 class="mb-4">
                                                                     <span>{{ $item['title'] ?? 'Title' }}</span>
                                                                 </h5>
@@ -854,7 +867,7 @@ li {
                                                                 <p>Case Study #{{ $index + 1 }}</p>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-8 d-flex align-items-center">
+                                                        <div class="col-md-8 d-flex align-items-center ps-md-4">
                                                             <div class="card-body Ahlawat-case-studies-body">
                                                                 {!! $item['text'] ?? '' !!}
                                                             </div>
@@ -868,7 +881,7 @@ li {
                             </div>
                         </div>
                         <!-- Custom carousel controls at bottom -->
-                        <div class="carousel-bottom-controls text-center mb-4">
+                        <div class="carousel-bottom-controls text-center mb-2">
                             <button class="btn  me-2" type="button" data-bs-target="#packageCarousel" data-bs-slide="prev">
                                 <i class="bi bi-chevron-left"></i></button>
                             <button class="btn " type="button" data-bs-target="#packageCarousel" data-bs-slide="next"><i
@@ -882,11 +895,12 @@ li {
     </section>
 
     @if(!empty($data['whyus']['items']))
-        <section class="pt-md-0 pt-0">
-            <div class="service-detail-overlay-1 py-md-5 py-4">
+        <section class="service-detail-overlay-1 py-4">
                 <div class="container">
-                    <div class="service-detail-overlay-top-contnt text-center mb-5">
-                        <h5>{!! highlightAsteriskText($data['whyus']['title'] ?? '') !!}</h5>
+                    <div class="row">
+                    
+                        <div class="service-detail-overlay-top-contnt text-center">
+                        <h5 class="heading text-white">{!! highlightAsteriskText($data['whyus']['title'] ?? '') !!}</h5>
                         
                         {{-- <h5>
                             <span>{{ Str::before($data['whyus']['title'] ?? '', ' ') }}</span>
@@ -895,7 +909,6 @@ li {
                         <p class="text-light">{!! $data['whyus']['subtitle'] ?? '' !!}</p>
                     </div>
 
-                    <div class="row">
                         @foreach($data['whyus']['items'] as $item)
                             <div class="col-lg-3 col-md-6 mb-4">
                                 <div class="service-detail-overlay-card pt-4 h-100">
@@ -903,7 +916,7 @@ li {
                                         class="service-detail-overlay-card-body d-flex flex-column align-items-center text-center text-light">
                                         @if(!empty($item['icon']))
                                             <figure class="service-icon-bg">
-                                                <img src="{{ asset('storage/' . $item['icon']) }}" alt="" class="p-3 rounded-5" />
+                                                <img src="{{ asset('storage/' . $item['icon']) }}" alt="" class="p-3" />
                                             </figure>
                                         @endif
                                         <div>
@@ -916,7 +929,6 @@ li {
                         @endforeach
                     </div>
                 </div>
-            </div>
         </section>
     @endif
 
