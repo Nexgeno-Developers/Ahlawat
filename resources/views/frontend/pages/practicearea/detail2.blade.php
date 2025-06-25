@@ -49,26 +49,24 @@
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
-body {
-  font-family: "poppins", sans-serif;
-}
 
 .section-color {
   background: rgba(231, 63, 58, 0.03);
 }
 
 .heading {
-  font-size: 24px;
-  font-weight: 600;
-
+    font-size: 24px;
+    font-weight: 600 !important;
+    line-height: 25px;
 }
 
-p,
+
+/* p,
 li {
   font-family: "poppins", sans-serif;
   font-size: 13px;
   font-weight: 400;
-}
+} */
 
 .orange-color {
   color: #E3433C;
@@ -599,7 +597,7 @@ li {
     --}}
 
     @if(!empty($hero))
-        <section class="section-color pt-md-5 pt-3 pb-md-5 pb-4">
+        <section class="section-color pt-md-5 pt-3 pb-md-5 pb-3">
             <div class="container">
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-lg-6 col-md-12 ">
@@ -629,17 +627,17 @@ li {
     @endif
 
     @if (!empty($intro))
-        <section class="pt-md-4 pt-3 pb-md-4 pb-2 mb-3">
+        <section class="pt-md-5 pt-3 pb-md-5 pb-3">
             <div class="container">
                 
                 @if(!empty($intro['texts']))
                     <div class="row g-3">
                         <div class="sec-2-intro text-center">
                     @if (!empty($intro['title']))
-                        <h4 class="fw-semibold pb-1 heading gray-color">{!! highlightAsteriskText($intro['title'] ?? '') !!}</h4>
+                        <h4 class="fw-semibold pb-1 heading gray-color mb-0">{!! highlightAsteriskText($intro['title'] ?? '') !!}</h4>
                     @endif
                     @if (!empty($intro['subtitle']))
-                        <p class="pb-md-1 pb-0">{!! $intro['subtitle'] !!}</p>
+                        <p class=" pb-0 pt-0 mb-0">{!! $intro['subtitle'] !!}</p>
                     @endif
                 </div>
                         @foreach($intro['texts'] ?? [] as $idx => $text)
@@ -656,13 +654,13 @@ li {
     @endif
 
     @if (!empty($sectors))
-        <section class="pt-md-4 pt-3 pb-md-4 pb-2 section-color">
+        <section class="pt-md-5 pt-3 pb-md-5 pb-3 section-color">
             <div class="container">
                 <div class="row">
 
                     <div class="timeline-topper-contnent-dv text-center">
-                    <h4 class="fw-semibold pb-1 heading gray-color"><span>{!! highlightAsteriskText($sectors['title'] ?? '') !!}</span></h4>
-                    <p class="pb-md-1 pb-0">@if(!empty($sectors['subtitle'])) <span>{{ $sectors['subtitle'] }}</span> @endif</p>
+                    <h4 class="fw-semibold pb-1 heading gray-color mb-0"><span>{!! highlightAsteriskText($sectors['title'] ?? '') !!}</span></h4>
+                    <p class=" pb-2 pt-0 mb-0">@if(!empty($sectors['subtitle'])) <span>{{ $sectors['subtitle'] }}</span> @endif</p>
                 </div>
 
                     @foreach($sectors['items'] ?? [] as $idx => $sector)
@@ -677,7 +675,7 @@ li {
                                     <h3 class="text-light fw-semibold mt-2">{!! highlightAsteriskText($sector['title'] ?? '') !!}</h3>
                                 </div>
                             </div>
-                            <div class="sectors-impact-act-1">
+                            <div class="sectors-impact-act-1 bg-light">
                                 <p class="pt-1 pe-5">{!! $sector['text'] ?? '' !!}</p>
                             </div>
                         </div>
@@ -688,7 +686,7 @@ li {
     @endif
 
     @if($assist)
-        <section class="pt-md-4 pt-3 pb-md-4 pb-2">
+        <section class="pt-md-5 pt-3 pb-md-5 pb-3">
             <div class="container">
                 
                 @if(!empty($assist['items']))
@@ -737,7 +735,7 @@ li {
                     <h4 class="fw-semibold pb-1 heading gray-color">
                         @if(!empty($process['title'])) <span>{!! highlightAsteriskText($process['title'] ?? '') !!}</span> @endif
                     </h4>
-                    <p>@if(!empty($process['subtitle'])) <span>{{ $process['subtitle'] }}</span> @endif</p>
+                    <p class="mb-0">@if(!empty($process['subtitle'])) <span>{{ $process['subtitle'] }}</span> @endif</p>
                 </div>
             @endif
 
@@ -763,7 +761,7 @@ li {
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-10 col-10 position-relative">
-                            <div class="step-text-div p-md-4 p-3">
+                            <div class="step-text-div p-md-4 p-3 bg-white">
                                 <h5 class="step-text-title">{{ $item['title'] ?? '' }}</h5>
                                 <div class="step-text-para mb-0">{!! $item['text'] ?? '' !!}</div>
                             </div>
@@ -771,7 +769,7 @@ li {
                     @else
                         {{-- Text left, number right --}}
                         <div class="col-lg-6 col-md-10 col-10 position-relative order-2 order-lg-1">
-                            <div class="step-text-div p-md-4 p-3">
+                            <div class="step-text-div p-md-4 p-3 bg-white">
                                 <h5 class="step-text-title">{{ $item['title'] ?? '' }}</h5>
                                 <div class="step-text-para mb-0">{!! $item['text'] ?? '' !!}</div>
                             </div>
@@ -802,7 +800,7 @@ li {
     </section>
 
     @if (!empty($data['penalties']['items']))
-        <section class="pt-md-4 pt-3 pb-md-4 pb-2">
+        <section class="pt-md-5 pt-3 pb-md-5 pb-3">
             <div class="container">
 
                 <div class="row">
@@ -811,7 +809,7 @@ li {
                     <h4 class="fw-semibold pb-1 heading gray-color">
                         <span>{!! highlightAsteriskText($data['penalties']['title'] ?? '') !!}</span>
                     </h4>
-                    <p class="pb-md-1 pb-0">{{ $data['penalties']['subtitle'] ?? '' }}</p>
+                    <p class=" pb-0 mb-1">{{ $data['penalties']['subtitle'] ?? '' }}</p>
                 </div>
 
                     @foreach ($data['penalties']['items'] as $item)
@@ -831,14 +829,14 @@ li {
         </section>
     @endif
 
-    <section class="pt-md-4 pt-3 pb-md-4 pb-2 section-color">
+    <section class="pt-md-5 pt-3 pb-md-5 pb-3 section-color">
         <div class="container">
             <div class="row">
                 <div class="timeline-topper-contnent-dv text-center">
-                    <h4 class="fw-semibold pb-1 heading gray-color">
+                    <h4 class="fw-semibold heading gray-color">
                         <span>{!! highlightAsteriskText($data['case_studies']['title'] ?? '') !!}</span>
                     </h4>
-                    <p class="pb-md-1 pb-0">{{ $data['case_studies']['subtitle'] ?? '' }}</p>
+                    <p class=" pb-2 mb-0">{{ $data['case_studies']['subtitle'] ?? '' }}</p>
                 </div>
 
                 @php
@@ -894,7 +892,7 @@ li {
     </section>
 
     @if(!empty($data['whyus']['items']))
-        <section class="service-detail-overlay-1 py-4">
+        <section class="service-detail-overlay-1 pt-md-5 pt-3 pb-md-5 pb-3">
                 <div class="container">
                     <div class="row">
                     
