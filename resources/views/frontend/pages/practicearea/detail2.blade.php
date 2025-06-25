@@ -318,7 +318,7 @@ li {
 }
 
 .bdr-main-coro {
-  border-radius: 20px;
+  border-radius: 20px !important;
   box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
   /* min-height: 310px; */
   max-height: 310px;
