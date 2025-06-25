@@ -49,13 +49,12 @@
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
-/* body {
+body {
   font-family: "poppins", sans-serif;
-} */
+}
 
 .section-color {
   background: rgba(231, 63, 58, 0.03);
-
 }
 
 .heading {
@@ -527,7 +526,7 @@ li {
 
 @media (min-width: 992px) {
   .timeline-list-contnent-dv-num-lft {
-    left: 30%;
+    left: 27.5%;
   }
 }
 
@@ -600,7 +599,7 @@ li {
     --}}
 
     @if(!empty($hero))
-        <section class="section-color pt-md-5 pt-3 pb-md-5 pb-3">
+        <section class="section-color pt-md-5 pt-3 pb-md-5 pb-4">
             <div class="container">
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-lg-6 col-md-12 ">
@@ -630,7 +629,7 @@ li {
     @endif
 
     @if (!empty($intro))
-        <section class="pt-md-4 pt-3 pb-md-5 pb-3">
+        <section class="pt-md-4 pt-3 pb-md-4 pb-2 mb-3">
             <div class="container">
                 
                 @if(!empty($intro['texts']))
@@ -644,7 +643,7 @@ li {
                     @endif
                 </div>
                         @foreach($intro['texts'] ?? [] as $idx => $text)
-                            <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
+                            <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center">
                                 <div class="sec-2-info pt-4 pb-3 pe-5 ps-4 h-100">
                                     {!! $text !!}
                                 </div>
